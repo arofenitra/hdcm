@@ -32,3 +32,8 @@ https://github.com/EdinburghNLP/awesome-hallucination-detection
 | Code LLMs hallucination        | Taxonomy + benchmarks          | arXiv:2504.20799             | Review of code generation hallucination |
 | HSAD                           | Hidden layer spectral features | arXiv:2509.23580             | Frequency domain analysis method        |
 | Awesome Hallucination Datasets | Collection and references      | EdinburghNLP GitHub          | Wide range of datasets & benchmarks     |
+
+MBPP/HumanEval : Baseline for functional correctness 
+HaluCode - CodeMirage : Dataset that can be used 
+## Programming Language and tools 
+Python , Rust, Java, Lua
