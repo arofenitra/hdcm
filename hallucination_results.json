@@ -1,0 +1,71 @@
+[
+  {
+    "example_id": 0,
+    "task_description": "Write a function to find the n largest integers from a given list of numbers, returned in descending order.",
+    "prompt": "# Task: Write a function to find the n largest integers from a given list of numbers, returned in descending order.\n# Write a complete Python function to solve this task.\n# Requirements:\n# 1. Write ONLY the function code\n# 2. Make sure the function is complete and syntactically correct\n# 3. Include proper parameter names based on the task\n# 4. Return the result, don't print it\n# 5. Ensure the function has proper indentation\n\ndef heap_queue_largest(",
+    "generated_code": "n, lst):\n    \"\"\"Returns the n largest elements from a list\"\"\"\n    if not lst or len(lst) < n:\n        return []\n    h = [lst[0]]\n    for i in range(1, n):\n        heappush(h, lst[i])\n    for i in range(n, len(lst)):\n        if lst[i] > h[0]:\n            heappop(h)\n            heappush(h, lst[i])\n    return h\n\n\nif __name__ == '__main__':\n    print(heap_queue_largest(3, [1, 2, 3, 4, 5, 6]))\n    print(heap_queue_largest(3, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]))\n    print(heap_queue_largest(3, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]))\n    print(heap_queue_largest(3, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54,",
+    "reference_code": "import heapq as hq\ndef heap_queue_largest(nums, n):\n    largest_nums = hq.nlargest(n, nums)\n    return largest_nums",
+    "test_cases": [
+      "assert heap_queue_largest([25, 35, 22, 85, 14, 65, 75, 22, 58], 3) == [85, 75, 65]",
+      "assert heap_queue_largest([25, 35, 22, 85, 14, 65, 75, 22, 58], 2) == [85, 75]",
+      "assert heap_queue_largest([25, 35, 22, 85, 14, 65, 75, 22, 58], 5) == [85, 75, 65, 58, 35]"
+    ],
+    "generated_valid_syntax": true,
+    "reference_valid_syntax": true,
+    "signature_match": true,
+    "generated_signature": "heap_queue_largest(n, lst)",
+    "reference_signature": "heap_queue_largest(nums, n)",
+    "imports_overlap": 0.0,
+    "length_ratio": 2.8869565217391306,
+    "num_test_cases": 3,
+    "tests_passed": 0,
+    "has_hallucination": true,
+    "hallucination_binary": 1
+  },
+  {
+    "example_id": 1,
+    "task_description": "Write a function to check if a string is a palindrome.",
+    "prompt": "# Task: Write a function to check if a string is a palindrome.\n# Write a complete Python function to solve this task.\n# Requirements:\n# 1. Write ONLY the function code\n# 2. Make sure the function is complete and syntactically correct\n# 3. Include proper parameter names based on the task\n# 4. Return the result, don't print it\n# 5. Ensure the function has proper indentation\n\ndef is_palindrome(",
+    "generated_code": "string):\n    \"\"\"Checks if a given string is a palindrome\"\"\"\n    return string == string[::-1]\n\nprint(is_palindrome(\"racecar\"))\nprint(is_palindrome(\"abcde\"))\nprint(is_palindrome(\"madam\"))\nprint(is_palindrome(\"hello\"))",
+    "reference_code": "def is_palindrome(s):\n    s = s.lower().replace(\" \", \"\")\n    return s == s[::-1]",
+    "test_cases": [
+      "assert is_palindrome(\"A man a plan a canal Panama\") == True",
+      "assert is_palindrome(\"racecar\") == True",
+      "assert is_palindrome(\"hello\") == False"
+    ],
+    "generated_valid_syntax": true,
+    "reference_valid_syntax": true,
+    "signature_match": true,
+    "generated_signature": "is_palindrome(string)",
+    "reference_signature": "is_palindrome(s)",
+    "imports_overlap": 0.0,
+    "length_ratio": 1.3875,
+    "num_test_cases": 3,
+    "tests_passed": 2,
+    "has_hallucination": false,
+    "hallucination_binary": 0
+  },
+  {
+    "example_id": 2,
+    "task_description": "Write a function to calculate the factorial of a number.",
+    "prompt": "# Task: Write a function to calculate the factorial of a number.\n# Write a complete Python function to solve this task.\n# Requirements:\n# 1. Write ONLY the function code\n# 2. Make sure the function is complete and syntactically correct\n# 3. Include proper parameter names based on the task\n# 4. Return the result, don't print it\n# 5. Ensure the function has proper indentation\n\ndef factorial(",
+    "generated_code": "n):\n    if n == 0 or n == 1:\n        return 1\n    else:\n        return n * factorial(n-1)\n\nprint(\"Factorial of 6 is\", factorial(6))\nprint(\"Factorial of 7 is\", factorial(7))\nprint(\"Factorial of 8 is\", factorial(8))\nprint(\"Factorial of 9 is\", factorial(9))\nprint(\"Factorial of 10 is\", factorial(10))\nprint(\"Factorial of 11 is\", factorial(11))\nprint(\"Factorial of 12 is\", factorial(12))\nprint(\"Factorial of 13 is\", factorial(13))\nprint(\"Factorial of 14 is\", factorial(14))\nprint(\"Factorial of 15 is\", factorial(15))\nprint(\"Factorial of 16 is\", factorial(16))\nprint(\"Factorial of 17 is\", factorial(17))\nprint(\"Factorial of 18 is\", factorial(18))\nprint(\"Factorial of 19 is\", factorial(19))\nprint(\"Factorial of 20 is\", factorial(20))\nprint(\"Factorial of 21 is\", factorial(21))\nprint(\"Factorial of 22 is\", factorial(22))\nprint(\"Factorial of 23 is\", factorial(23))\nprint(\"Factorial of 24 is\", factorial(24))\nprint(\"Factorial of 25 is\", factorial(25))\nprint(\"Factorial of 26 is\", factorial(26))\nprint(\"Factorial of 27 is\", factorial(27))\nprint(\"Factorial of 28 is\", factorial(28))\nprint(\"Factorial of 29 is\", factorial(29))\nprint(\"Factorial of 30 is\", factorial(30))\nprint(\"Factorial of 31 is\", factorial(31))\nprint(\"Factorial of 32 is\", factorial(",
+    "reference_code": "def factorial(n):\n    if n == 0:\n        return 1\n    else:\n        return n * factorial(n-1)",
+    "test_cases": [
+      "assert factorial(5) == 120",
+      "assert factorial(0) == 1",
+      "assert factorial(1) == 1"
+    ],
+    "generated_valid_syntax": true,
+    "reference_valid_syntax": true,
+    "signature_match": true,
+    "generated_signature": "factorial(n)",
+    "reference_signature": "factorial(n)",
+    "imports_overlap": 0.0,
+    "length_ratio": 1.10752688172043,
+    "num_test_cases": 3,
+    "tests_passed": 3,
+    "has_hallucination": false,
+    "hallucination_binary": 0
+  }
+]
